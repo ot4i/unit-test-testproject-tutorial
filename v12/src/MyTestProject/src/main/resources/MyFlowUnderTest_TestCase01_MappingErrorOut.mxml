@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><MessageAssembly>
+   <version xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</version>
+   <checkpoint>
+      <messageId xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">0000E01C-609A9A2A-00000001</messageId>
+      <propagationCount xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</propagationCount>
+      <nodeCallDepth xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">2</nodeCallDepth>
+      <timestamp xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="TIMESTAMP">2021-05-11 14:52:26.017</timestamp>
+      <source>
+         <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Mapping Error</name>
+         <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">MyFlowUnderTest#FCMComposite_1_3</identifier>
+         <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmMSLMappingNode</type>
+         <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">out</terminal>
+         <nodePath>
+            <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">MyApplicationUnderTest</application>
+            <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">MyFlowUnderTest</messageFlow>
+            <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Mapping Error</node>
+         </nodePath>
+         <inputNode xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="BOOLEAN">FALSE</inputNode>
+      </source>
+      <target>
+         <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTP Reply</name>
+         <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">MyFlowUnderTest#FCMComposite_1_2</identifier>
+         <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmWSReplyNode</type>
+         <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">in</terminal>
+         <nodePath>
+            <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">MyApplicationUnderTest</application>
+            <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">MyFlowUnderTest</messageFlow>
+            <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTP Reply</node>
+         </nodePath>
+      </target>
+   </checkpoint>
+   <environment/>
+   <localEnvironment xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+      <Destination>
+         <HTTP>
+            <RequestIdentifier iib:valueType="BLOB">4556485400000000000000001f34ea5bfce0000000000000</RequestIdentifier>
+         </HTTP>
+      </Destination>
+   </localEnvironment>
+   <exceptionList xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+      <ParserException>
+         <File iib:valueType="CHARACTER">C:\ci\product-build\WMB\src\DataFlowEngine\MessageServices\ImbRootParser.cpp</File>
+         <Line iib:valueType="INTEGER">876</Line>
+         <Function iib:valueType="CHARACTER">ImbRootParser::parseNextItem</Function>
+         <Type iib:valueType="CHARACTER">ComIbmWSInputNode</Type>
+         <Name iib:valueType="CHARACTER">MyFlowUnderTest#FCMComposite_1_1</Name>
+         <Label iib:valueType="CHARACTER">MyFlowUnderTest.HTTP Input</Label>
+         <Catalog iib:valueType="CHARACTER">BIPmsgs</Catalog>
+         <Severity iib:valueType="INTEGER">2</Severity>
+         <Number iib:valueType="INTEGER">5902</Number>
+         <Text iib:valueType="CHARACTER">Exception whilst parsing</Text>
+         <Insert>
+            <Type iib:valueType="INTEGER">5</Type>
+            <Text iib:valueType="CHARACTER">Root</Text>
+         </Insert>
+         <Insert>
+            <Type iib:valueType="INTEGER">5</Type>
+            <Text iib:valueType="CHARACTER">JSON</Text>
+         </Insert>
+         <Insert>
+            <Type iib:valueType="INTEGER">5</Type>
+            <Text iib:valueType="CHARACTER">54686973206d6573736167652069732064656c696265726174656c79206e6f742076616c6964204a534f4e</Text>
+         </Insert>
+         <Insert>
+            <Type iib:valueType="INTEGER">5</Type>
+            <Text iib:valueType="CHARACTER">MyFlowUnderTest.HTTP Input</Text>
+         </Insert>
+         <ParserException>
+            <File iib:valueType="CHARACTER">C:\ci\product-build\WMB\src\MTI\MTIforBroker\JSON\ImbJSONParser.cpp</File>
+            <Line iib:valueType="INTEGER">693</Line>
+            <Function iib:valueType="CHARACTER">ImbJSONParser::parseLastChild</Function>
+            <Type iib:valueType="CHARACTER">ComIbmWSInputNode</Type>
+            <Name iib:valueType="CHARACTER">MyFlowUnderTest#FCMComposite_1_1</Name>
+            <Label iib:valueType="CHARACTER">MyFlowUnderTest.HTTP Input</Label>
+            <Catalog iib:valueType="CHARACTER">BIPmsgs</Catalog>
+            <Severity iib:valueType="INTEGER">3</Severity>
+            <Number iib:valueType="INTEGER">5705</Number>
+            <Text iib:valueType="CHARACTER">JSON parsing errors have occurred</Text>
+            <ParserException>
+               <File iib:valueType="CHARACTER">C:\ci\product-build\WMB\src\MTI\MTIforBroker\JSON\ImbJSONDocHandler.cpp</File>
+               <Line iib:valueType="INTEGER">637</Line>
+               <Function iib:valueType="CHARACTER">ImbJSONDocHandler::onInvalidCharacter</Function>
+               <Type iib:valueType="CHARACTER">ComIbmWSInputNode</Type>
+               <Name iib:valueType="CHARACTER">MyFlowUnderTest#FCMComposite_1_1</Name>
+               <Label iib:valueType="CHARACTER">MyFlowUnderTest.HTTP Input</Label>
+               <Catalog iib:valueType="CHARACTER">BIPmsgs</Catalog>
+               <Severity iib:valueType="INTEGER">3</Severity>
+               <Number iib:valueType="INTEGER">5719</Number>
+               <Text iib:valueType="CHARACTER">The JSON parser reached the end of the bitstream whilst parsing the JSON document</Text>
+               <Insert>
+                  <Type iib:valueType="INTEGER">5</Type>
+                  <Text iib:valueType="CHARACTER">{</Text>
+               </Insert>
+               <Insert>
+                  <Type iib:valueType="INTEGER">5</Type>
+                  <Text iib:valueType="CHARACTER">[</Text>
+               </Insert>
+               <Insert>
+                  <Type iib:valueType="INTEGER">5</Type>
+                  <Text iib:valueType="CHARACTER">(</Text>
+               </Insert>
+               <Insert>
+                  <Type iib:valueType="INTEGER">2</Type>
+                  <Text iib:valueType="CHARACTER">1</Text>
+               </Insert>
+               <Insert>
+                  <Type iib:valueType="INTEGER">2</Type>
+                  <Text iib:valueType="CHARACTER">8</Text>
+               </Insert>
+            </ParserException>
+         </ParserException>
+      </ParserException>
+   </exceptionList>
+   <message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="WSRoot">
+      <Properties iib:parser="WSPROPERTYPARSER">
+         <MessageSet iib:valueType="CHARACTER">InputMessageSchema.json</MessageSet>
+         <MessageType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <MessageFormat iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <Encoding iib:valueType="INTEGER">546</Encoding>
+         <CodedCharSetId iib:valueType="INTEGER">1208</CodedCharSetId>
+         <Transactional iib:valueType="BOOLEAN">FALSE</Transactional>
+         <Persistence iib:valueType="BOOLEAN">FALSE</Persistence>
+         <CreationTime iib:valueType="GMTTIMESTAMP">2021-05-11 14:52:26.017</CreationTime>
+         <ExpirationTime iib:valueType="INTEGER">-1</ExpirationTime>
+         <Priority iib:valueType="INTEGER">0</Priority>
+         <ReplyIdentifier iib:valueType="BLOB">000000000000000000000000000000000000000000000000</ReplyIdentifier>
+         <ReplyProtocol iib:valueType="CHARACTER">SOAP-HTTP</ReplyProtocol>
+         <Topic iib:elementType="0x03000000"/>
+         <ContentType iib:valueType="CHARACTER">text/plain; charset=utf-8</ContentType>
+         <IdentitySourceType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourceToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourcePassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourceIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedPassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+      </Properties>
+      <HTTPInputHeader iib:parser="WSINPHDR">
+         <Content-Type iib:valueType="CHARACTER">text/plain; charset=utf-8</Content-Type>
+         <User-Agent iib:valueType="CHARACTER">Java/1.8.0_261</User-Agent>
+         <Host iib:valueType="CHARACTER">localhost:7802</Host>
+         <Accept iib:valueType="CHARACTER">text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2</Accept>
+         <Connection iib:valueType="CHARACTER">keep-alive</Connection>
+         <Content-Length iib:valueType="CHARACTER">43</Content-Length>
+         <X-Original-HTTP-Command iib:valueType="CHARACTER">POST http://localhost:7802/MyFlowUnderTest HTTP/1.1</X-Original-HTTP-Command>
+         <X-Server-Name iib:valueType="CHARACTER">localhost</X-Server-Name>
+         <X-Server-Port iib:valueType="CHARACTER">7802</X-Server-Port>
+         <X-Remote-Addr iib:valueType="CHARACTER">127.0.0.1</X-Remote-Addr>
+         <X-Remote-Host iib:valueType="CHARACTER">localhost</X-Remote-Host>
+         <X-Scheme iib:valueType="CHARACTER">http</X-Scheme>
+      </HTTPInputHeader>
+      <JSON iib:parser="json">
+         <Data>
+            <Result iib:valueType="CHARACTER">The input message failed validation!</Result>
+         </Data>
+      </JSON>
+   </message>
+</MessageAssembly>

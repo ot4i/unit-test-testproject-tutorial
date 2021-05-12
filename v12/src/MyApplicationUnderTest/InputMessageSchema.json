@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Order",
+    "type": "object",
+    "properties": {
+    	"FirstName": {
+    		"title": "FirstName",
+    		"type": "string"
+    	},
+    	"LastName": {
+    	  	"title": "LastName",
+    	   	"type": "string"
+    	},
+    	"Country": {
+    	  	"title": "Country",
+    	   	"type": "string"
+    	}
+    },
+    "required": ["FirstName", "LastName", "Country"]
+}

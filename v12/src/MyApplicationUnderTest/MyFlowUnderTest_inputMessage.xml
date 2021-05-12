@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessagePool xmlns="http://wwww.ibm.com/iib/test/1.0.0">
+    <InputMessage timestamp="1620159841079" nodeId="FCMComposite_1_1" name="Input_JohnDoe" id="1620159841079-356">
+        <plainText>%7B%22FirstName%22%3A+%22John%22%2C+%22LastName%22%3A+%22Doe%22%2C+%22Country%22%3A%22US%22%7D</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1620159853533" nodeId="FCMComposite_1_1" name="Input_FailsValidation" id="1620159853533-384">
+        <plainText>This+message+is+deliberately+not+valid+JSON</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1620142443024" nodeId="FCMComposite_1_1" name="Input_JoeBloggs" id="1620142443024-186">
+        <plainText>%7B%22FirstName%22%3A%22Joe%22%2C%22LastName%22%3A%22Bloggs%22%2C%22Country%22%3A%22GB%22%7D</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1620721553332" nodeId="FCMComposite_1_1" name="Input_OttoNormalverbraucher" id="1620721553332-16">
+        <plainText>%7B%22FirstName%22%3A+%22Otto%22%2C+%22LastName%22%3A+%22Normalverbraucher%22%2C+%22Country%22%3A%22DE%22%7D</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1620721742657" nodeId="FCMComposite_1_1" name="Input_JeanDupont" id="1620721742657-73">
+        <plainText>%7B%22FirstName%22%3A+%22Jean%22%2C+%22LastName%22%3A+%22Dupont%22%2C+%22Country%22%3A%22FR%22%7D</plainText>
+    </InputMessage>
+</MessagePool>

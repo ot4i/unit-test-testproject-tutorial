@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Order",
+    "type": "object",
+    "properties": {
+    	"Result": {
+    		"title": "Result",
+    		"type": "string"
+    	}
+    },
+    "required": ["Result"]
+}
