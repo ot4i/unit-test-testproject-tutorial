@@ -1,0 +1,226 @@
+{
+    "version": "0.1",
+    "pageContent": 
+	{
+        "_comments": "object that contains data for page labels, buttons, etc.",
+        "navItems": 
+		{
+            "_common": 
+			{
+                "buttonBackToGallery": 
+				{
+                    "name": "Back To Gallery",
+					"method": "backToGallery()",
+					"idName": "backToGallery"	
+                },
+                "buttonStartTutorial": 
+				{
+                    "name": "Start Tutorial",
+					"method": "startTutorialFromDetailsScreen()",
+					"idName": "startTutorial"
+                },
+				"buttonViewDetails": 
+				{
+                    "name": "View Details",
+					"method": "viewDetails()",
+					"idName": "stepsViewDetails"	
+                }
+            }
+        }
+    },
+    "tutorial": 
+	{
+        "_common": 
+		{
+            "name": "Unit Testing - Running Test Cases in Test Projects and Interation Server JUnit configuration",
+            "shortDescription": "Learn how to structure Test Cases inside Test projects, and how to configure test execution options for Integration Server JUnits.",
+            "durationText": "This tutorial takes approximately",
+            "durationTime": "15 minutes",
+            "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
+            "resourceToOpen": "MyFlowUnderTest",
+            "helpLink": 
+			{
+                "text": "IBM Knowledge Center",
+           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+            }
+        },
+        "pageDetails": 
+		{
+            "topicsName": "Tutorial topics",
+            "_topicListComment": "A short list of product concepts or tasks demonstrated by this tutorial",
+            "topicList": 
+			[
+                {
+                    "title": "Java Unit Testing"
+                }			
+            ],
+            "outcomesName": "Learning outcomes",
+            "_outcomesComment": "A description of what the user will have learned or accomplished by running this tutorial.",
+            "outcomeList": 
+			[
+                {
+                    "title": "Explore some pre-defined unit tests for a message flow"
+                },
+				{
+                    "title": "Run the provided tests in the App Connect Enterprise Toolkit using the default execution options for Integration Server JUnits"
+                },
+				{
+                    "title": "Explore more complex configuration options for controlling how Integration Server JUnits are run by the App Connect Enterprise Toolkit."
+                }
+            ],
+            "summary": 
+			{
+                "overviewName": "Overview",
+                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the ACE concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+                "sections": 
+				[
+					 {
+                        "section": "This tutorial provides a relatively simple message flow in an application that is designed to receive a JSON input message over HTTP. Five input messages are provided which exercise different branches of logic in the message flow. A Test Project is also provided, which contains nine test cases. Each test case tests a single message flow node using a NodeSpy. Where required, Message Assembly files (.mxml) are provided which describe the expected output from each test case."
+					 },
+					 {
+                        "section": "The tutorial describes how to run the provided test cases agains the message flow using the default options for running an Integration Server JUnit. The tutorial then describes how you can run a single isolated test case, and use other more complex configuration options such as turning tracing on and how to run tests in an integration server which uses an existing work directory."					
+					 }
+                ]
+            },
+			"helpLinks": 
+			{
+				"_helpLinksComment": "Helplinks that have a type:web attribute are rendered as web links. Otherwise, links are assumed to be to embedded Help topics in the Knowledge Center.",
+				"title": "Find out more",
+				"details": 
+				[
+					{
+						"title": "Knowledge Center link to ",
+						"description": "Developing unit tests using Test Projects",
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
+						"type": "web"
+					},
+					{					
+						"title": "Knowledge Center link to ",
+						"description": "Using the Message Assembly Editor",
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
+						"type": "web"
+					}
+				]
+			}
+        },
+        "pageSteps": 
+		{
+            "create": 
+			{
+                "overview": 
+				{
+                    "name": "Create",
+                    "heading": "Import a project",
+                    "_createComment": "A description of what will happen when the user clicks Import.",
+                    "sections": 
+					[
+                        {
+                            "section": "Click <span class='uicontrol'>Import</span> and two projects will be added to your workspace. The application named <span class='application'>MyApplicationUnderTest</span> provides a single message flow named <span class='resource'>MyMessageFlowUnderTest</span> which receives data over HTTP. The test project named <span class='application'>MyTestProject</span> contains eighteen example message assembly files, and nine unit tests."
+						},						
+						{				
+						 	"section": "The message flow named <span class='resource'>MyMessageFlowUnderTest</span> expects to receive input JSON messages which conform to the JSON schema named <b>InputMessageSchema.json</b> which you will find in the same application. Each message carries three string properties named FirstName, LastName and Country for a fictitious person. The Country field uses a two character abbreviation for a country. Example valid input messages are saved in the application for use with the Flow Exerciser:<br><code>{\"FirstName\": \"Jean\", \"LastName\": \"Dupont\", \"Country\":\"FR\"}<br>{\"FirstName\": \"Joe\", \"LastName\": \"Bloggs\", \"Country\":\"GB\"}<br>{\"FirstName\": \"John\", \"LastName\": \"Doe\", \"Country\":\"US\"}<br>{\"FirstName\": \"Otto\", \"LastName\": \"Normalverbraucher\", \"Country\":\"DE\"}</code><br>These input messages have been used to capture Message Assembly files which describe what the logical tree looks like for each step of the message flow. If you would like, you can use these inputs with the Flow Exerciser to become familiar with the behavior of the message flow. This is not a mandatory step for the tutorial - as we have already taken this message data and used it to create test cases which will be executed later in the tutorial - but it may help with your understanding of the scenario."							
+						},						
+						{
+							"section": "Now move to the Prepare section where we will explore the provided message flow and the test project's test cases in detail."
+						 }
+					 ]
+				 },
+                "helpLinks": 
+				{
+                    "title": "Find out more",
+                    "details": 
+					[
+                        {
+                            "title": "Knowledge Center link to ",
+                            "description": "Developing integration solutions by using applications",
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
+							"type": "web"
+                        }
+                    ]
+                },
+                "actions": 
+				{
+                    "title": "Create Actions",
+                    "details": 
+					[
+                        {
+                            "name": "Import",
+                            "method": "importArtifacts()"
+                        }
+                    ]
+                }
+            },
+            "prepare": 
+			{
+                "overview": 
+				{
+                    "name": "Prepare",
+                    "heading": "",
+                    "_prepareComment": "A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
+                    "sections": 
+		     [				 
+				{
+                "section":"Nine Test Cases have been defined inside the Test Project <span class='resource'>MyTestProject</span> in the java file named <b>MyApplicationUnderTest_MyFlowUnderTest_UnitTests.java</b>. You can open this file to familiarise yourself with the detail of the test cases. In summary their purpose is as follows:<br>TestCase01: Test the MappingError node to ensure it transforms data correctly<br>TestCase02: Test the Route node to ensure a message with Country=FR is routed to the default output terminal<br>TestCase03: Test the MappingDefault node to ensure it transforms data correctly<br>TestCase04: Test the Route node to ensure a message with Country=GB is routed to the GB output terminal<br>TestCase05: Test the MappingGB node to ensure it transforms data correctly<br>TestCase06: Test the Route node to ensure a message with Country=US is routed to the US output terminal<br>TestCase07: Test the MappingUS node to ensure it transforms data correctly<br>TestCase08: Test the Route node to ensure a message with Country=DE is routed to the DE output terminal<br>TestCase09: Test the MappingDE node to ensure it transforms data correctly"
+			   },
+				{
+							"section": "Now move to the Run section where we will execute the tests and explore more detailed configuration which controls how the Toolkit runs the tests in a Test Project."
+				 }
+				
+             ]
+                },
+                "helpLinks": 
+				{
+                }
+            },
+            "run": 
+			{
+                "overview": 
+				{
+                    "name": "Run",
+                    "heading": "",
+                    "_runComment": "The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
+                "sections":[                            
+                {
+                "section":"<b>Edit the Compute node ESQL to generate the JSON output</b>",
+                "steps":{
+                  "type":"ordered",
+                  "details":[
+                    {
+                      "details": "Open <span class='application'>PurchaseFlow_Compute.esql</span> in the application <span class='application'>ExampleTestDrivenDevelopment</span>. Change the code as follows:<br><code>&nbsp;&nbsp;CREATE FUNCTION Main() RETURNS BOOLEAN<br>&nbsp;&nbsp;BEGIN<br>&nbsp;&nbsp;&nbsp;&nbsp;DECLARE Total DECIMAL 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;DECLARE PurchaseRef REFERENCE TO InputRoot.XMLNSC.MyOrder.Items;<br>&nbsp;&nbsp;&nbsp;&nbsp;MOVE PurchaseRef FIRSTCHILD;<br>&nbsp;&nbsp;&nbsp;&nbsp;WHILE LASTMOVE(PurchaseRef) DO<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SET Total = Total + PurchaseRef;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOVE PurchaseRef NEXTSIBLING;<br>&nbsp;&nbsp;&nbsp;&nbsp;END WHILE;<br>&nbsp;&nbsp;&nbsp;&nbsp;SET OutputRoot.Properties = InputRoot.Properties;<br>&nbsp;&nbsp;&nbsp;&nbsp;SET OutputRoot.JSON.Data.Name = InputRoot.XMLNSC.MyOrder.Name;<br>&nbsp;&nbsp;&nbsp;&nbsp;SET OutputRoot.JSON.Data.Total = Total;<br>&nbsp;&nbsp;&nbsp;&nbsp;RETURN TRUE;<br>&nbsp;&nbsp;END;<br></code>Save and close the ESQL file."						
+					}
+				  ]
+				}
+			   },
+				{				                
+                "section":"<b>Run the provided unit test again which should now PASS</b>",
+                "steps":{
+                  "type":"ordered",
+                  "details":[
+                    {
+                      "details": "Right-click the test project <span class='application'>ExampleTestDrivenDevelopment_IntegrationTest</span> and choose the option to <span class='application'>Run Test Project</span>. Just like before, after a few seconds, an integration server will be started which runs the test. This time the results will report that the test has now succeeded, because the message flow logic now correctly generates the JSON output tree which matches to the Message Assembly file which we created earlier in the tutorial."
+					}
+				  ]				
+			   }
+			},
+					{
+			    			"section": "This tutorial has shown how to use the message assembly editor and do test driven development whilst developing message flows."
+						}
+                    ]
+                },
+                "helpLinks": 
+				{
+                    "title": "Find out more",
+                    "details": 
+					[                        
+                        {
+                            "title": "Knowledge Center link to ",
+                            "description": "Unit Testing your message flow",
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/rt26110_.htm",
+							"type": "web"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
